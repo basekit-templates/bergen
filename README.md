@@ -1,0 +1,2 @@
+# bergen
+Blog template
