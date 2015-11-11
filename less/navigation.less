@@ -1,0 +1,225 @@
+// -----------------------------
+//  Navigation
+// -----------------------------
+
+
+
+//  Navigation Positioning
+// --------------------------
+
+
+// Positions navigation to the right of the feature and vertically center to the page
+[data-widget-type="extendednavigation"] {
+	height: 100%;
+	overflow: scroll;
+
+	.flex-display(flex);
+	.justify-content(flex-end);
+	.align-items(center);
+}
+
+.extendednavigation {
+	margin: 0 5%;
+	padding-top: 85px;
+	height: 100%;
+	width: 42%;
+
+	@media @tablet-860px {
+		padding-top: 50px;
+		width: 52%;
+	}
+
+	// Positioning for the navigation element
+	&__navigation-body {
+		height: 100%;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+
+	// List container positioning
+	&__navigation-list {
+		margin-top: 0;
+		height: 100%;
+
+		.flex-display(flex);
+		.flex-wrap(wrap);
+		.align-items(center);
+		.align-content(center);
+	}
+
+	// Makes the navigation items span full width of the parent container
+	&__navigation-item {
+		display: block;
+		width: 100%;
+
+		// Navigation text styling
+		.item-name {
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin: 0 0 15px 0;
+			.transition(color 0.3s);
+			text-transform: uppercase;
+			word-wrap: break-word;
+			white-space: nowrap;
+
+			@media @mobile-650px {
+				font-size: 14px;
+				margin-bottom: 0;
+				padding: 0.75em 1em;
+			}
+		}
+	}
+
+	// Navigation selected and hover text styling
+	&__navigation-item.selected .item-name,
+	&__navigation-item:hover .item-name {
+		color: @color-swatch6-hover;
+		color: black;
+	}
+}
+
+
+//  Folder Dropdown
+// --------------------------
+
+
+// Active state
+.extendednavigation__navigation-item.folder:hover {
+	.navigation-list--children {
+		transition-delay: 0s;
+		transform: translateX(0);
+		max-height: none;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// Hidden state
+.navigation-list--children {
+	background-color: @color-swatch7;
+	position: relative;
+	max-height: 0;
+	opacity: 0;
+
+	visibility: hidden;
+	transform: translateZ(0);
+	transform: translateY(10%);
+
+	transition: all 0.5s ease 0s, visibility 0s linear 0.5s;
+}
+
+
+
+//  Navigation Icon Toggle - Open
+// -------------------------------
+
+.navigation-toggle {
+   
+    // Displays as icon's middle bar
+    background-color: @color-swatch1;
+    background-clip: content-box;
+    display: inline-block;
+
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    padding: 24px 4px 23px 10px;
+
+    position: fixed;
+    right: 30px;
+    text-indent: -9999px;
+    top: 26px;
+    z-index: 99999;
+
+    .transition(background-color 0.35s ease-in);
+
+    @media @tablet-860px {
+    	background-color: @font-swatch10-color;
+    	padding: 24px 0 23px 10px;
+		right: 20px;
+		top: 11px;
+		width: 40px;
+	}
+
+    // Top and bottom navigation icon bars
+    &:after, 
+    &:before {
+        content: "";
+        height: 3px;
+        width: 36px;
+        position: absolute;
+        left: 10px;
+        display: block;
+        background: @color-swatch1;
+        margin-right: 0;
+        margin-left: 0;
+        .transition(all 0.35s ease-in-out);
+
+        @media @tablet-860px {
+        	background-color: @font-swatch10-color;
+        	width: 30px;
+        }
+    }
+
+    // Icon top bar
+    &:before {
+        top: 14px;
+
+        @media @tablet-860px {
+        	top: 16px;
+        }
+    }
+
+    // Icon bottom bar
+    &:after {
+        bottom: 13px;
+
+        @media @tablet-860px {
+        	bottom: 15px;
+        }
+    }
+
+    // Icon hover state
+    &:hover {
+    	background-color: @color-swatch1;
+
+    	@media @tablet-860px {
+        	background-color: @font-swatch10-color;
+        }
+    }
+}
+
+
+//  Navigation Icon Toggle - Close
+// --------------------------------
+
+ // Toggle icon open state
+.animate .navigation-toggle {
+    background-color: transparent;
+    .transition(background-color 0s ease-out);
+    z-index: 99999;
+
+    // Icon top bar
+    &:before {
+    	background-color: black;
+        top: 26px; 
+        .transform(rotate(45deg));
+
+        @media @tablet-860px {
+        	background-color: @font-swatch10-color;
+        }
+    }
+
+    // Icon bottom bar
+    &:after {
+    	background-color: black;
+        bottom: 21px; 
+        .transform(rotate(-45deg));
+
+        @media @tablet-860px {
+        	background-color: @font-swatch10-color;
+        }
+    }
+}

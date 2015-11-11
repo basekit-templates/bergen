@@ -1,0 +1,121 @@
+// Feature Slideshow
+// --------------------
+
+// Home feature slideshow width
+.home [data-widget-type="responsiveslideshow"] {
+	.flex(1 0 65%);
+	position: initial;
+
+	@media only screen and (max-width: 1500px) {
+		.flex(1 0 55%);
+	}
+}
+
+// Home slideshow styling
+.home .responsiveslideshow {
+	&__figure {
+		/*border-top: 30px solid @color-swatch1;
+		border-bottom: 30px solid @color-swatch1;
+		border-right: 30px solid @color-swatch1;*/
+		height: 100vh;
+		position: initial;
+	}
+
+	&__slide-navigation,
+	&__slide-pagination {
+		position: absolute;
+		margin: 0;
+
+		@media @tablet-860px {
+			display: none;
+			visibility: hiddne;
+		}
+	}
+
+	// Navigation controls
+	&__slide-navigation {
+		background-color: rgba(0,0,0, 0.5);
+		right: 0;
+		bottom: 0;
+		height: 60px;
+		width: 200px;
+	}
+
+	// Navigation buttons
+	&__previous-button,
+	&__next-button,
+	&__pause-toggle {
+		background-color: transparent;
+		color: white;
+		height: 60px;
+		width: 60px;
+	}
+
+	// Navigation control text
+	&__control-text {
+		display: none;
+		visibility: hidden;
+	}
+
+	// Adds subtle dark overlay to slideshow images
+	&__slides-list {
+		background-color: rgba(0,0,0, 0.25);
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	&__caption {
+		bottom: 0;
+		left: 0;
+		top: 0;
+		padding-top: 35%;
+		text-align: center;
+		width: 40%;
+	}
+
+	// Slideshow image title and description
+	&__image-title,
+	&__image-description {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+
+	// Pagnation controls
+	&__slide-pagination {
+		bottom: 30px;
+		left: 0;
+		text-align: center;
+		max-width: 750px;
+		width: 35%;
+		z-index: 9991;
+
+		@media only screen and (max-width: 1500px) {
+			width: 45%;
+		}
+	}
+
+	// Pagination item
+	&__pagination-item {
+		margin-right: 2px;
+	}
+
+	// Pagination button styles
+	&__button.button {
+		background-color: transparent;
+		border: 2px solid @font-swatch7-background-color;
+		.border-radius(100px);
+		overflow: hidden;
+		padding: 0;
+		text-indent: -9999px;
+		height: 15px;
+		width: 15px;
+	}
+}
+
+.home .responsiveslideshow .selected .button {
+	background-color: @font-swatch7-background-color;
+}

@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+	<div id="perspective" class="perspective effect-moveleft">
+		<div class="container">
+			<div class="wrapper"><!-- wrapper needed for scroll -->
+				<div class="main clearfix">
+					<nav>
+						<ul>
+
+					</ul>
+					</nav>
+				</div><!-- /main -->
+			</div><!-- wrapper -->
+		</div><!-- /container -->
+
+		{{widget('extendednavigation', 'navigation', {'align': 'right'})|raw}}
+
+	</div><!-- /perspective -->
+
+{% endblock %}

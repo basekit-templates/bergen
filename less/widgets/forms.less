@@ -1,0 +1,176 @@
+
+// -----------------------------
+//  Global Styles
+// -----------------------------
+
+
+// Inputs
+// ---------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line,
+.product-filters .input--search {
+	background-color: @color-swatch7;
+	border: 1px solid darken(@color-swatch7, 6%);
+	color: @font-swatch5-color;
+	width: 100%;
+
+	-webkit-box-shadow: 0px 0px 32px 0px rgba(245,245,245,1);
+	-moz-box-shadow: 0px 0px 32px 0px rgba(245,245,245,1);
+	box-shadow: 0px 0px 32px 0px rgba(245,245,245,1);
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: darken(@color-swatch7, 15%);
+
+		-webkit-box-shadow: 0px 0px 32px 0px rgba(240,240,240,1);
+		-moz-box-shadow: 0px 0px 32px 0px rgba(240,240,240,1);
+		box-shadow: 0px 0px 32px 0px rgba(240,240,240,1);
+
+		.transition(border .5s ease-in-out);
+	}
+}
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+.input--single-line,
+.product-filters .input--search {
+	height: 60px;
+}
+
+.textarea {
+	min-height: 150px;
+	height: auto!important;
+	padding-top: 13px;
+}
+
+
+// Buttons
+// ---------
+
+.button,
+button,
+.item-remove,
+.quantity-wrap .button--quantity,
+.select-wrap,
+.review-link,
+.phone-number-link,
+.read-more,
+.responsiveslideshow .button--pagination {
+	height: auto;
+	width: auto;
+	//padding: 18px 35px;
+	line-height: @font-swatch7-line-height;
+	.transition(background-color 0.5s ease-in-out);
+
+	&:hover {
+
+	}
+}
+
+.buttonwidget__button,
+.contactform__button,
+.signupform__button,
+.paypalbuynow__button,
+.tweet__button,
+.dropbox__button,
+.clicktocall__phone-number-link,
+.blogsearch__button,
+.ecomproductslist__button,
+.ecomproduct__button,
+.ecombasket__basket-toggle,
+.ecombasketsummary__button {
+	padding: 18px 35px;
+
+	@media @mobile-650px {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+
+// Legends
+// ---------
+
+legend {
+    color: @font-swatch2-color;
+    font-family: @font-swatch2-font-family;
+    font-size: bkscale(@font-swatch3-font-size, 0.98);
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch2-line-height;
+    margin-bottom: 25px;
+
+    @media @mobile-650px {
+        font-size: bkscale(@font-swatch3-font-size, 0.8);
+        line-height: bkscale(@font-swatch3-line-height, 0.85);
+    }
+}
+
+
+// Labels
+// --------
+
+label {
+    color: lighten(@font-swatch4-color, 15%);
+    font-family: @font-swatch4-font-family;
+    font-size: bkscale(@font-swatch7-font-size, 0.85);
+    font-weight: @font-swatch7-font-weight;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+
+// -----------------------------
+//  Contact Form
+// -----------------------------
+
+
+// To contain absolutly positioned labels
+.form-group {
+	position: relative;
+}
+
+// Contact form styling
+.contactform {
+	label {
+		position: absolute;
+	    top: 17px;
+	    left: 21px;
+	}
+
+	input,
+	textarea {
+		padding-left: 140px;
+
+		@media @mobile-650px {
+			padding-top: 65px;
+			padding-left: 20px;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+
+
+// -----------------------------
+//  Email Signup
+// -----------------------------
+
+.signupform {
+	&__input {
+		padding-right: 120px;
+	}
+
+	&__button {
+		position: absolute;
+		right: 0;
+		top: -67px;
+	}
+}
+

@@ -1,0 +1,110 @@
+{
+    "name": "Bergen",
+    "thumbnail": "baseplate.png",
+    "widgetVersion":2,
+    "pageTypes": ["home"],
+    "images": [
+        "images/feature.jpg",
+        "images/logo.png"
+    ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#f9f9f9",
+            "color2":"#3295e1",
+            "color3":"#1e262c",
+            "color4":"#1e262c",
+            "color5":"#56595b",
+            "color6":"#6f787f",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "font1": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "38px",
+            "font-weight": "700",
+            "line-height": "46px",
+            "color": "@color-swatch4",
+            "letter-spacing": "1px"
+        },
+        "font2": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "28px",
+            "font-weight": "700",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "18px",
+            "font-weight": "700",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "18px",
+            "font-weight": "700",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Poly\", \"Georgia\", serif",
+            "font-size": "19px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "30px",
+            "color": "@color-swatch6",
+            "color-hover": "darken(@color-swatch6, 25%)",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "700",
+            "line-height": "20px",
+            "color": "@color-swatch1",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "38px",
+            "font-weight": "700",
+            "line-height": "50px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Poly\", \"Georgia\", serif",
+            "font-size": "20px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "26px",
+            "font-weight": "700",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}

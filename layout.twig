@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ page.seoLang }}">
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ page.title }}</title>
+
+		{% include basekit.headScript %}
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	</head>
+	<body class="{{ page.backgroundClass }}">
+
+		{% block content %}
+		{% endblock %}
+
+
+		{% include basekit.bodyScript %}
+
+		<!-- JS  -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="{{asset('js/classie.js')}}"></script>
+		<script src="{{asset('js/menu.js')}}"></script>
+		<script src="{{asset('js/unslider.js')}}"></script>
+		<script src="{{asset('js/main.js')}}"></script>
+
+	</body>
+</html>
