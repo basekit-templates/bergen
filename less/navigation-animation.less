@@ -2,8 +2,8 @@
 // -------------------------------------------
 
 // Makes sure the feature / navigation are full height and width
-html, 
-body, 
+html.full-nav, 
+body.full-nav, 
 .perspective {
 	height: 100%;
 	width: 100%;
@@ -31,19 +31,16 @@ body,
 	position: relative;
 	z-index: 10;
 
-	.transform(translateZ(0) translateX(0) rotateY(0deg));
-
-	//-webkit-transform: translateZ(0) translateX(0) rotateY(0deg); /* reset transforms (Chrome bug) */
-	//transform: translateZ(0) translateX(0) rotateY(0deg);
+	.transform(translateZ(0) translateX(0) rotateY(0deg)); /* reset transforms (Chrome bug) */
 
 	&:before {
-		content: "BACK";
+		content: "\2190";
 	    position: fixed;
-	    top: 50%;
+	    color: black;
+	    font-size: 50px;
 	    right: 0;
-	    color: red;
-	    webkit-transform: translateX(-50%) rotateY(28deg) translateZ(15px);
-	    transform: translateX(-50%) rotateY(28deg) translateZ(15px);
+	    webkit-transform: translateX(-50%) translateY(50%) rotateY(28deg) translateZ(15px);
+	    transform: translateX(-50%) translateY(50%) rotateY(28deg) translateZ(15px);
 	    z-index: 999;
 
 	    opacity: 0;
@@ -60,20 +57,9 @@ body,
 		opacity: 0;
 		background: rgba(0,0,0,0.2);
 
-		/* The transition delay of the height needs to be synced with the container transition time */
 		.transition(opacity 0.4s, height 0s 0.4s);
-		//-webkit-transition: opacity 0.4s, height 0s 0.4s;
-		//transition: opacity 0.4s, height 0s 0.4s;
 	}
 }
-
-// redundant?
-/*.component {
-	margin: 0 auto;
-	width: 60%;
-	text-align: justify;
-	font-size: 1.5em;
-}*/
 
 .modalview.animate {
 	.feature-container {
@@ -94,8 +80,7 @@ body,
 	}
 
 	.feature-wrapper {
-		//-webkit-transform: translateZ(-1px); /* solves a rendering bug in Chrome on Windows */
-		.transform(translateZ(-1px));
+		.transform(translateZ(-1px)); /* fixes a rendering bug in Chrome on Windows */
 	}
 }
 
@@ -108,13 +93,13 @@ body,
 	transform-origin: 50% 50%;
 }
 
-// add indicator that this closes navigation
+// Add indicator that this closes navigation
 .nav-right .feature-container:after {
 	background: rgba(255,255,255,0.6);
 }
 
 
-// Moves featureoff canvas to display navigation
+// Moves feature off canvas to display navigation
 .nav-right.animate .feature-container {
 	-webkit-transform: translateX(-50%) rotateY(28deg) translateZ(15px);
 	transform: translateX(-50%) rotateY(28deg) translateZ(15px);

@@ -64,7 +64,6 @@ button,
 .responsiveslideshow .button--pagination {
 	height: auto;
 	width: auto;
-	//padding: 18px 35px;
 	line-height: @font-swatch7-line-height;
 	.transition(background-color 0.5s ease-in-out);
 
@@ -139,9 +138,21 @@ label {
 // Contact form styling
 .contactform {
 	label {
+		background-color: @color-swatch7;
+		border-top: 1px solid darken(@color-swatch7, 6%);
+		border-left: 1px solid darken(@color-swatch7, 6%);
+		border-right: 1px solid darken(@color-swatch7, 6%);
+		padding: 5px 22px;
 		position: absolute;
-	    top: 17px;
-	    left: 21px;
+		left: 0;
+		right: 0;
+	    top: 0;
+
+	    &:hover,
+		&:active,
+		&:focus {
+			border-color: darken(@color-swatch7, 15%);
+		}
 	}
 
 	input,
@@ -171,6 +182,11 @@ label {
 		position: absolute;
 		right: 0;
 		top: -67px;
+
+		@media @mobile-650px {
+			position: relative;
+			top: 0;
+		}
 	}
 }
 

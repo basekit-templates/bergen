@@ -1,3 +1,4 @@
+
 // Feature Slideshow
 // --------------------
 
@@ -11,12 +12,13 @@
 	}
 }
 
+
+//  Slideshow styling
+// ----------------------
+
 // Home slideshow styling
 .home .responsiveslideshow {
 	&__figure {
-		/*border-top: 30px solid @color-swatch1;
-		border-bottom: 30px solid @color-swatch1;
-		border-right: 30px solid @color-swatch1;*/
 		height: 100vh;
 		position: initial;
 	}
@@ -37,7 +39,8 @@
 		background-color: rgba(0,0,0, 0.5);
 		right: 0;
 		bottom: 0;
-		height: 60px;
+		height: 70px;
+		max-width: 23%;
 		width: 200px;
 	}
 
@@ -47,8 +50,16 @@
 	&__pause-toggle {
 		background-color: transparent;
 		color: white;
-		height: 60px;
-		width: 60px;
+		display: inline-block;
+		line-height: 70px;
+		padding; 0 10px;
+		position: relative;
+		height: 70px;
+		width: 65px;
+	}
+
+	&__next-button { 
+		margin-left: -5px;
 	}
 
 	// Navigation control text
@@ -68,20 +79,38 @@
 		bottom: 0;
 	}
 
+	// Slideshow title and description
 	&__caption {
-		bottom: 0;
-		left: 0;
-		top: 0;
-		padding-top: 35%;
-		text-align: center;
-		width: 40%;
+		background-color: rgba(0,0,0,0.5);
+		left: 35%;
+		max-width: 42%;
+		padding: 12px 25px 10px;	
+		width: auto;
+
+		@media only screen and (max-width: 1500px) {
+			left: 45%;
+			max-width: 32%;
+		}
 	}
 
 	// Slideshow image title and description
 	&__image-title,
 	&__image-description {
-		margin: 0 auto;
-		max-width: 80%;
+		color: @font-swatch7-color;
+	}
+
+	&__image-title {
+		font-size: 13px;
+		font-family: @font-swatch4-font-family;
+		letter-spacing: 1px;
+		line-height; 24px;
+		text-transform: uppercase;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	&__image-description {
+		font-size: 15px;
+		line-height: 26px;
 	}
 
 	// Pagnation controls
@@ -118,4 +147,71 @@
 
 .home .responsiveslideshow .selected .button {
 	background-color: @font-swatch7-background-color;
+}
+
+
+//  Slideshow Controls
+// ----------------------
+
+// Pause icon
+.icon--pause:before {
+	content: "";
+    border-left: 14px solid @font-swatch7-color;
+    border-right: 14px dashed transparent;
+    border-top: 8px dashed transparent;
+    border-bottom: 8px dashed transparent;
+
+    left: 7px;
+    right: 0;
+    margin: 0 auto;
+    top: 31px;
+
+    position: absolute;
+    width: 13px;
+    height: 16px;
+}
+
+// Play icon
+.icon--pause.pause:before {
+	content: "";
+    border-left: 4px solid @font-swatch7-color;
+    border-right: 4px solid @font-swatch7-color;
+    border-top: none;
+    border-bottom: none;
+    left: -5px;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+// Previous and next icon
+.previous-button,
+.next-button {
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		content: "";
+		border-left: 3px solid @font-swatch7-color;
+		border-top: 3px solid @font-swatch7-color;
+		position: absolute;
+		top: 33px;
+		margin: 0;
+		height: 12px; 
+		width: 12px;
+	}
+}
+
+// Previous button
+.previous-button:after {
+	left: 35px;
+	.transform(rotate(-45deg));
+}
+
+// Next button
+.next-button:after {
+	right: 35px;
+	.transform(rotate(135deg));
 }

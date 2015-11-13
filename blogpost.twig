@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div id="perspective" class="template-feature  perspective  nav-right  blog">
+
+	<div class="feature-container">
+		<div class="feature-wrapper">
+
+			<div class="blogpost__heading">
+				<div class="blogpost__heading-wrapper">
+					<h1 class="post-title">{{ plugins.blog.posts[0].title|e }}</h1>
+					<time class="timestamp" datetime="{{ get_php_date('c', plugins.blog.posts[0].publishedDate) }}">{{ plugins.blog.posts[0].publishedDate|formatBlogDate(languageCode) }}</time>
+
+					<a class="arrow-container  smooth"  id="scroll"  href="#sub-navigation">
+						<span class="scroll-arrow"></span>
+					</a>
+					
+				</div>
+			</div>
+
+			{{widget('blogpost', 'singleblogpost', {})|raw}}
+
+			<header class="template-header">
+				<div class="brand">
+					{{widget('companyname', 'company-name', {"business": "Bergen"})|raw}}
+					<!--{{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}-->
+				</div>
+			</header>
+
+		</div>
+	</div>
+
+	{{widget('extendednavigation', 'navigation', {'align': 'center'})|raw}}
+
+</div>
+
+{% endblock %}

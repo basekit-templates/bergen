@@ -2,7 +2,7 @@
     "name": "Bergen",
     "thumbnail": "baseplate.png",
     "widgetVersion":2,
-    "pageTypes": ["home"],
+    "pageTypes": ["home", "blogpost"],
     "images": [
         "images/feature.jpg",
         "images/logo.png"

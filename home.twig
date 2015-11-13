@@ -3,18 +3,10 @@
 {% block content %}
 
 
-<div id="perspective" class="template-feature  home  perspective  nav-right">
+<div id="perspective" class="template-feature  perspective  nav-right  home">
 
 	<div class="feature-container">
 		<div class="feature-wrapper">
-
-			<!--<div class="feature-content">
-				{{widget('content', 'feature-content', { content: '<h1>LOREM IPSUM DOLOR</h1> <p>Testing content widget</p>'})|raw}}
-				{{widget('button', 'feature-button', {
-					'text': 'Lorum ipsum',
-					'align': 'widget-align-center'
-				})|raw}}
-			</div>-->
 
 			{{widget('feature', 'header-feature', {
 				"header": "profile",
@@ -34,18 +26,18 @@
 			    'allowLoop': false,
 			    'crop': true,
 			    'images':[
-			      {
-			        'url':'http://images.unsplash.com/photo-1433148749784-5e235e9efd12?q=80&fm=jpg&s=7c1592ac1b4d576a48af77f6c2e0ab14',
-			        'title':'First slide title',
-			        'description': 'First slide description'
-			      },
-			      {
-			        'url':'https://images.unsplash.com/photo-1418225043143-90858d2301b4?q=80&fm=jpg&s=cec4e6a46e513a540401e413286fa2fe', 
-			        'title':'Second slide title',
-			        'description': 'Second slide description'
-			      }
+					{
+						'url':'http://images.unsplash.com/photo-1433148749784-5e235e9efd12?q=80&fm=jpg&s=7c1592ac1b4d576a48af77f6c2e0ab14',
+						'title':'First slide title',
+						'description': 'First slide description'
+					},
+					{
+						'url':'https://images.unsplash.com/photo-1418225043143-90858d2301b4?q=80&fm=jpg&s=cec4e6a46e513a540401e413286fa2fe', 
+						'title':'Second slide title',
+						'description': 'Second slide description'
+					}
 			    ]
-			  })|raw}}
+			})|raw}}
 
 			 <header class="template-header">
 				<div class="brand">

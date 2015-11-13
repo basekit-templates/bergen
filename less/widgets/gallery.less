@@ -1,21 +1,8 @@
-// ------------------------------------
-// Timeline Template: CSS > Widgets > Gallery
-// ------------------------------------
-
-
-
-
-// Breakpoints for gallery layouts
-// -------------------------------
-
-
-
-@gallery-2col: ~"only screen and (min-width : 500px)";
-@gallery-1col: ~"only screen and (min-width : 1px) and (max-width : 500px)";
 
 
 // Gallery Item
 // ------------------------------
+
 
 
 .gallery__gallery-item {
@@ -27,7 +14,6 @@
 
 	// 2 Columns Layout
 
-	@media @gallery-2col {
 		width: 50%;
 		padding-bottom: 25%;
 		margin: 0;
@@ -54,15 +40,14 @@
                 order: 2;
             }
         }
-	}
 
 
 	// 1 Column Layout
 
-	@media @gallery-1col {
+	@media @mobile-650px {
 		width: 100%;
 		height: auto;
-		padding-bottom: 50%;
+		padding-bottom: 0;
 		margin: 0;
 
         &:nth-child(even) {
@@ -87,9 +72,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    .flex-display;
+
+    @media @mobile-650px {
+        display: block;
+        position: relative;
+    }
 }
 
 
@@ -103,6 +91,11 @@
 	margin: 0; // LESS Framework reset
     width: 50%;
     position: relative;
+
+    @media @mobile-650px {
+        display: block;
+        width: 100%;
+    }
 }
 
 
@@ -114,16 +107,17 @@
 
 .gallery__image-link {
 	display: block;
-
 	background-size: cover;
 	background-position: center center;
-    -webkit-flex: 1 1 50%;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%;
+    .flex(1 1 50%);
 }
 
 .gallery__image {
 	display: none; // Using background image instead
+
+    @media @mobile-650px {
+        display: block;
+    }
 }
 
 
@@ -136,27 +130,23 @@
     bottom: 0;
     left: 0;
     background-color: @color-swatch7;
+    padding: 1em;
 
-
+    .flex(1 1 50%);
     .flex-display(flex);
-
     .flex-direction(column);
-
     .flex-wrap(nowrap);
-
     .justify-content(center);
-
     .align-content(stretch);
-
     .align-items(center);
 
     text-align: center;
-
-    padding: 1em;
-
     .transition(all 0.1s ease-in-out);
 
-    .flex(1 1 50%);
+    @media @mobile-650px {
+        display: block;
+        position: relative;
+    }
 }
 
 // Image Title
