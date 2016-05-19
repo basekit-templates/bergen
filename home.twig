@@ -1,61 +1,74 @@
 {% extends "layout.twig" %}
-
 {% block content %}
 
 
-<div id="perspective" class="template-feature  perspective  nav-right  home">
-
-	<div class="feature-container">
-		<div class="feature-wrapper">
-
-			{{widget('feature', 'header-feature', {
-				"header": "profile",
-				"defaultBgImg": asset('images/feature-bg.jpg'),
-				'positionTopPercentage': '0',
-				'showBtn': true,
-				buttonText: "Lorem Ipsum"
-			})|raw}}
-
-			{{widget('responsiveslideshow', 'header-slideshow', {
-			    'duration': '3',
-			    'transSpeed': '1000',
-			    'transType': 'fade',
-			    'showButtons': true,
-			    'showBullets': true,
-			    'allowPause': true,
-			    'allowLoop': false,
-			    'crop': true,
-			    'images':[
-					{
-						'url':'http://images.unsplash.com/photo-1433148749784-5e235e9efd12?q=80&fm=jpg&s=7c1592ac1b4d576a48af77f6c2e0ab14',
-						'title':'First slide title',
-						'description': 'First slide description'
-					},
-					{
-						'url':'https://images.unsplash.com/photo-1418225043143-90858d2301b4?q=80&fm=jpg&s=cec4e6a46e513a540401e413286fa2fe', 
-						'title':'Second slide title',
-						'description': 'Second slide description'
-					}
-			    ]
-			})|raw}}
-
-			 <header class="template-header">
-				<div class="brand">
-					{{widget('companyname', 'company-name', {"business": "Bergen"})|raw}}
-					<!--{{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}-->
-				</div>
-			</header>
+<!-- Navigation Container -->
+<div class="template-feature  nav-effect--container  home-page">
 
 
-		</div>
-	</div>
+    <!-- Feature Containers -->
+    <div class="template-feature--container  nav-effect--transform">
+        <div class="template-feature--wrapper  nav-effect--wrapper">
 
-	{{widget('extendednavigation', 'navigation', {'align': 'center'})|raw}}
+
+            <!-- Feature Widget -->
+            {{widget('feature', 'header-feature', {
+                "header": "profile",
+                'positionTopPercentage': '0',
+                'showBtn': true,
+                buttonText: "Lorem Ipsum"
+            })|raw}}
+
+
+            <!-- Slideshow Widget -->
+            {{widget('responsiveslideshow', 'slideshow', {
+                'duration':'5',
+                'transSpeed': '800',
+                'transType': 'fade',
+                'showButtons': false,
+                'showBullets': true,
+                'allowPause': false,
+                'allowLoop': false,
+                'crop': true,
+                'images':[
+            {
+                'imageHeight':'auto',
+                'imageWidth':'100%',
+                'url':asset('images/slideshow-1.jpg')
+            },
+            {
+                'imageHeight':'auto',
+                'imageWidth':'100%',
+                'url':asset('images/slideshow-2.jpg')
+            }
+
+            ]})|raw}}
+
+
+            <!-- Header -->
+            {% include "includes/header.twig" %}
+
+
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    {{widget('extendednavigation', 'navigation', {'align': 'center'})|raw}}
 
 </div>
 
-<div class="template-container">
-	{{zone('main')|raw}}
+
+<div role="main">
+
+    <!-- Main Zone -->
+    {{zone('main')|raw}}
+
 </div>
+
+
+<!-- Footer -->
+{% include "includes/footer.twig" %}
+
 
 {% endblock %}

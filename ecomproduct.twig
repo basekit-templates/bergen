@@ -3,7 +3,7 @@
 
 
 <!-- Navigation Container -->
-<div class="template-feature  nav-effect--container  blog-page">
+<div class="template-feature  nav-effect--container  ecom-page">
 
 
     <!-- Feature Containers -->
@@ -11,20 +11,12 @@
         <div class="template-feature--wrapper  nav-effect--wrapper"  id="main">
 
 
-            <!-- Main Zone -->
-            {{zone('main')|raw}}
-
-
             <!-- Header -->
             {% include "includes/header.twig" %}
 
 
-            <!-- Smooth Scroll Arrow -->
-            <div class="scroll-arrow">
-                <a class="arrow-container" href="#post-content">
-                    <span class="arrow-down"></span>
-                </a>
-            </div>
+            <!-- Main Zone -->
+            {{zone('main')|raw}}
 
 
             <!-- Footer -->
@@ -47,11 +39,10 @@
 {% block scripts %}
 
     <script>
-    $(".arrow-container").click(function() {
-        $('html, body').animate({
-            scrollTop: $(".blogpost__post-content").offset().top
-        }, 2000);
-    });
+        if($(".ecomproduct__product-gallery").length == 0)
+        {
+           $("body").addClass("product-one-image");
+        }
     </script>
 
 {% endblock %}
