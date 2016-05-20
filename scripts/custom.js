@@ -44,13 +44,13 @@ $(document).ready(function(){
 var publishedmode = true;
 
 
-if($("body.edit-mode").length > 0) {
+if($("body.edit.site-iframe").length > 0) {
     publishedmode = false;
 }
 
 
 // If in publish mode re-un twitter script every 10 seconds
-if(publishedmode==false) {
+if(publishedmode==true) {
     window.setInterval(function(){
 
         $(document).ready(function(){
