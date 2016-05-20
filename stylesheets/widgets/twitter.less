@@ -103,12 +103,17 @@
 
     //  Tweet content
     &__tweet-content {
+        color: lighten(@color__h3--text, 10%);
         font-size: @font__h3--font-size;
         font-size: 26px;
         line-height: @font__h3--line-height;
-        line-height: 38px;
+        line-height: 40px;
         padding: 0;
         word-break: break-word;
+
+        a {
+            color: lighten(@color__h3--text, 10%);
+        }
 
         @media @tablet-860px {
             font-size: 18px;
