@@ -50,7 +50,7 @@ if($("body.edit-mode").length > 0) {
 
 
 // If in publish mode re-un twitter script every 10 seconds
-if(publishedmode==true) {
+if(publishedmode==false) {
     window.setInterval(function(){
 
         $(document).ready(function(){
