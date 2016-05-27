@@ -14,7 +14,7 @@
         .flex-display;
         .flex-wrap(wrap);
         .align-content(flex-start);
-        .flex(1 0 33.33%);
+        .flex-grow(1);
         max-width: 33.33%;
         padding-right: 30px;
 
@@ -150,5 +150,25 @@
             display: none;
             visibility: hidden;
         }
+    }
+}
+
+
+// Styles for responsive columns
+.responsivecolumns .columns-three-left,
+.responsivecolumns .columns-three-middle,
+.responsivecolumns .columns-three-right,
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+
+    .blogpostlist__post-items {
+        display: block;
+    }
+
+    .blogpostlist__post-article {
+        max-width: 100%;
     }
 }
