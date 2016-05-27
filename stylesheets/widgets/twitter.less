@@ -14,12 +14,10 @@
 // Full width widget
 .twitter {
     background-color: @color__twitter--background;
-    background-color: #F5F5F5;
     border-top: 1px solid darken(@color__twitter--background, 4%);
     border-bottom: 1px solid darken(@color__twitter--background, 4%);
     min-height: 330px;
-    overflow-x: hidden!important;
-    overflow-y: visible!important;
+    overflow: visible!important;
     width: 100%!important;
 
     @media @tablet-860px {
@@ -177,6 +175,8 @@
     }
 }
 
+.responsivecolumns .columns-two-left,
+.responsivecolumns .columns-two-right,
 .responsivecolumns .columns-three-left,
 .responsivecolumns .columns-three-middle,
 .responsivecolumns .columns-three-right,
@@ -184,6 +184,11 @@
 .responsivecolumns .columns-four-second,
 .responsivecolumns .columns-four-third,
 .responsivecolumns .columns-four-fourth {
+
+    .twitter {
+        overflow-x: hidden!important;
+        overflow-y: visible!important;
+    }
 
     .twitter__avatar {
         margin-top: 0;
