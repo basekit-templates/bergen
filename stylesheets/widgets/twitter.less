@@ -18,7 +18,8 @@
     border-top: 1px solid darken(@color__twitter--background, 4%);
     border-bottom: 1px solid darken(@color__twitter--background, 4%);
     min-height: 330px;
-    overflow: visible!important;
+    overflow-x: hidden!important;
+    overflow-y: visible!important;
     width: 100%!important;
 
     @media @tablet-860px {
@@ -166,6 +167,25 @@
             display: none;
             visibility: hidden;
         }
+    }
+}
+
+
+.responsivecolumns .columns-three-left,
+.responsivecolumns .columns-three-middle,
+.responsivecolumns .columns-three-right,
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+    .twitter__avatar {
+        margin-top: 0;
+    }
+
+    .twitter__tweet-content {
+        font-size: 18px;
+        line-height: 32px;
     }
 }
 
