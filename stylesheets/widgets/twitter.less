@@ -15,14 +15,8 @@
 .twitter {
     background-color: @color__twitter--background;
     border-top: 1px solid darken(@color__twitter--background, 4%);
-    border-bottom: 1px solid darken(@color__twitter--background, 4%);
-    min-height: 330px;
     overflow: visible!important;
     width: 100%!important;
-
-    @media @tablet-860px {
-        min-height: 310px;
-    }
 
 
     // Twitter list item
@@ -103,7 +97,7 @@
         font-size: 26px;
         line-height: @font__h3--line-height;
         line-height: 40px;
-        padding: 0;
+        padding: 0 15px 15px;
         word-break: break-word;
 
         a {
@@ -204,11 +198,13 @@
 // -------------------------
 
 .dots {
+    background-color: @color__twitter--background;
+    border-bottom: 1px solid darken(@color__twitter--background, 4%);
     margin: 0 auto;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: -60px;
+    left: 30px;
+    right: 30px;
     padding: 10px 25px;
     text-align: center;
 
