@@ -20,17 +20,7 @@
     &__tweet-list {
         background-color: @color__twitter--background;
         border-top: 1px solid darken(@color__twitter--background, 4%);
-        *zoom: 1;
-
-        &:before,
-        &:after {
-            content: " ";
-            display: table;
-        }
-
-        &:after {
-            clear: both;
-        }
+        height: 100%;
     }
 
 
@@ -221,6 +211,7 @@
     background-color: @color__twitter--background;
     border-bottom: 1px solid darken(@color__twitter--background, 4%);
     margin: -1px auto 0;
+    bottom: -60px;
     left: 0;
     right: 0;
     position: absolute;
