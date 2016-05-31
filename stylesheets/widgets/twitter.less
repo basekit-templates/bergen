@@ -18,9 +18,24 @@
     width: 100%!important;
 
 
+    // Twitter list
+    &__tweet-list {
+        *zoom: 1;
+
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
+
+
     // Twitter list item
     &__tweet-item {
-        .clearfix;
         list-style: none;
         margin-bottom: 0;
         overflow: visible!important;
@@ -206,7 +221,6 @@
     background-color: @color__twitter--background;
     border-bottom: 1px solid darken(@color__twitter--background, 4%);
     margin: -1px auto 0;
-    max-height: 60px;
     position: relative;
     padding: 10px 25px;
     text-align: center;
