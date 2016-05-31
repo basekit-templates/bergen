@@ -24,10 +24,6 @@
         min-height: 310px;
     }
 
-    @media @mobile-650px {
-        min-height: 295px;
-    }
-
 
     // Twitter list item
     &__tweet-item {
@@ -197,6 +193,10 @@
     .twitter__tweet-content {
         font-size: 18px;
         line-height: 32px;
+
+        @media @mobile-650px {
+            line-height: 28px;
+        }
     }
 }
 
