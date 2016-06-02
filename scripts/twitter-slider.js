@@ -27,7 +27,7 @@
 			delay: 3000, // f for no autoplay
 			complete: f, // when a slide's finished
 			keys: !f, // keyboard shortcuts - disable if it breaks things
-			dots: f, // display â€¢â€¢â€¢â€¢oâ€¢ pagination
+			dots: f, // display pagination
 			fluid: f // is it a percentage width?,
 		};
 
@@ -193,3 +193,7 @@
 		});
 	};
 })(window.jQuery, false);
+
+$(window).resize(function(){
+  unslider.reInit() // or mySwiper.resizeFix()
+});
