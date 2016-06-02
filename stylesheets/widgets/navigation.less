@@ -459,15 +459,12 @@
 //  Hide Navigation Overlay
 // --------------------------
 
-[data-widget-type="extendednavigation"] .widget-overlay {
-    display: none;
-}
-
-.animate [data-widget-type="extendednavigation"] .widget-overlay {
-    display: block;
-}
-
-
+[data-widget-type="extendednavigation"] .widget-overlay,
 [data-widget-type="extendednavigation"] .widget-overlay ul.widget__list.list--options {
     display: none!important;
 }
+
+.animate [data-widget-type="extendednavigation"] .widget-overlay {
+    display: block!important;
+}
+
