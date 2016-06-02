@@ -69,7 +69,7 @@
 			this.el.css({
 				overflow: 'hidden',
 				width: _.max[0],
-				height: this.items.first().outerHeight()
+				height: 'auto'
 			});
 
 			//  Set the relative widths
