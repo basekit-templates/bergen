@@ -69,3 +69,9 @@ if(publishedmode==false) {
         });
     }, 5000);
 }
+
+
+$(window).resize(function(){
+  Unslider.reInit() // or mySwiper.resizeFix()
+});
+

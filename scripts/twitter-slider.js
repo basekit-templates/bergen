@@ -193,7 +193,3 @@
 		});
 	};
 })(window.jQuery, false);
-
-$(window).resize(function(){
-  unslider.reInit() // or mySwiper.resizeFix()
-});
