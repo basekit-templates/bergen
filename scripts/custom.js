@@ -22,22 +22,19 @@ $(document).ready(function(){
 
 
 // Initializer for Twitter widget slideshow effect
-window.resize(function(){
-    $(document).ready(function(){
-        BaseKit.Util.waitsFor(function () {
-            return $('.twitter__tweet-item').length > 0 ? true : false;
-        }, function () {
-            $('.bk-twitter').unslider({
-                delay: false,             //  Stops slider auto sliding through tweets
-                complete: function() {},  //  A function that gets called after every slide animation
-                keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-                dots: true,               //  Display dot navigation
-                fluid: true              //  Support responsive design. May break non-responsive designs
-            });
-        }, function () {
-        }, 5000);
-        unslider.reInit()
-    });
+$(document).ready(function(){
+    BaseKit.Util.waitsFor(function () {
+        return $('.twitter__tweet-item').length > 0 ? true : false;
+    }, function () {
+        $('.bk-twitter').unslider({
+            delay: false,             //  Stops slider auto sliding through tweets
+            complete: function() {},  //  A function that gets called after every slide animation
+            keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+            dots: true,               //  Display dot navigation
+            fluid: true              //  Support responsive design. May break non-responsive designs
+        });
+    }, function () {
+    }, 5000);
 });
 
 
