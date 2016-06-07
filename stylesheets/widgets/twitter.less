@@ -206,12 +206,10 @@
 
     .dots {
         position: absolute;
-        bottom: -60px;
         left: 30px;
         right: 30px;
 
         @media @mobile-650px {
-            bottom: initial;
             left: 0;
             right: 0;
         }
@@ -226,15 +224,16 @@
 .dots {
     background-color: @color__twitter--background;
     border-bottom: 1px solid darken(@color__twitter--background, 4%);
-    float: left;
     margin: -1px auto 0;
+    bottom: -60px;
     left: 0;
     right: 0;
-    //position: absolute;
+    position: absolute;
     padding: 10px 25px;
     text-align: center;
 
     @media @mobile-650px {
+        bottom: -36px;
         padding: 0 25px;
     }
 
