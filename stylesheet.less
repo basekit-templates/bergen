@@ -181,10 +181,16 @@
 // Main
 // ---------------
 
+html, body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 
 // Body background colour
 body {
     background-color: @color__body--background;
+    height: calc(100% + 1px)!important;
 }
 
 
