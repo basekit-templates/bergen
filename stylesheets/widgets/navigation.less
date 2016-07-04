@@ -23,6 +23,18 @@
     top: 0;
     left: 0;
     right: 0;
+    
+    // Removes scroll to stop navigation icon from being hidden
+    @media @tablet-860px {
+        overflow: initial;
+    }
+}
+
+// Readds scroll to make sure navigation isn't cut off when longer than the viewport
+.animate [data-widget-type="extendednavigation"] {
+    @media @tablet-860px {
+        overflow: scroll!important;
+    }
 }
 
 
