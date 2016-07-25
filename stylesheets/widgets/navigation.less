@@ -23,17 +23,21 @@
     top: 0;
     left: 0;
     right: 0;
-    
+
     // Removes scroll to stop navigation icon from being hidden
     @media @tablet-860px {
         overflow: initial;
+    }
+
+    @media @mobile-650px {
+        overflow: hidden;
     }
 }
 
 // Readds scroll to make sure navigation isn't cut off when longer than the viewport
 .animate [data-widget-type="extendednavigation"] {
     @media @tablet-860px {
-        overflow: scroll!important;
+        overflow-y: scroll!important;
     }
 }
 
@@ -100,15 +104,20 @@
             font-weight: @font__navigation--font-weight;
             letter-spacing: @font__navigation--letter-spacing;
             margin: 0;
-            padding: 18px 0 16px;
+            padding: 15px 18px;
             text-transform: uppercase;
             word-wrap: break-word;
             white-space: nowrap;
 
+            @media @tablet-860px {
+                font-size: 15px;
+            }
+
             @media @mobile-650px {
                 font-size: 14px;
                 margin-bottom: 0;
-                padding: 0.75em 1em;
+                padding: 10px 12px 8px;
+                white-space: normal;
             }
 
             @media only screen and (max-height: 560px) {
