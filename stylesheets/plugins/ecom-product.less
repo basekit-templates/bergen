@@ -219,11 +219,16 @@
             // Product image
             .image {
                 max-width: 100%;
+                max-height: 100%;
                 height: auto;
                 width: 100%;
 
                 @media @tablet-860px {
                     width: auto;
+                }
+
+                @media @mobile-650px {
+                    max-height: 100%;
                 }
             }
         }
