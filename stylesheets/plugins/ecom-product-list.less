@@ -19,6 +19,12 @@
 	}
 
 
+    // Product filters message
+    .message {
+        margin: 35px;
+    }
+
+
 	&__listing-title {
 		.flex-order(2);
 		padding: 35px 30px 5px;
@@ -141,6 +147,55 @@
             visibility: hidden;
         }
     }
+}
+
+
+.clear-filters {
+
+
+    .button--submit {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .button--clear {
+        position: relative;
+        right: -2px;
+    }
+
+
+    .toggle-filter {
+        top: 135px;
+
+
+        &.active {
+            top: 315px;
+
+            @media @tablet-860px {
+                top: 310px;
+            }
+
+            @media @mobile-650px {
+                top: 42px;
+            }
+        }
+    }
+
+
+    .listing-header {
+        @media @mobile-650px {
+            display: block;
+        }
+    }
+
+
+    .listing-title {
+        @media @mobile-650px {
+            padding: 35px 30px;
+        }
+    }
+
 }
 
 
