@@ -57,18 +57,13 @@
     // Basket icon
     .icon--basket {
         &:before {
-            background-image: image('/images/basket.svg');
+            background-image: image('/images/basket-dark.svg');
             background-repeat: no-repeat;
             background-position: center;
             content: "";
             display: inline-block;
             height: 30px;
             width: 30px;
-
-
-            @media @tablet-860px {
-                background-image: image('/images/basket-dark.svg');
-            }
         }
     }
 
@@ -316,7 +311,7 @@
     // ------------------------------
 
     &__basekit-total {
-        color: @color__companyname--text;
+        color: white;
         margin: 0 auto 0 0;
         padding-bottom: 0;
         padding-right: 1em;
@@ -352,6 +347,17 @@
 }
 
 
+// Basket colour for homepage
+.home-page .icon--basket:before {
+    background-image: image('/images/basket.svg');
+
+
+    @media @tablet-860px {
+        background-image: image('/images/basket-dark.svg');
+    }
+}
+
+
 // Show Ecom Basket when basket is clicked
 .basket-open {
 
@@ -365,7 +371,8 @@
         background-image: image('/images/basket.svg');
     }
 
-    .template-feature .responsiveslideshow__slide-pagination {
+    .template-feature .responsiveslideshow__slide-pagination,
+    .template-feature .responsiveslideshow__slide-navigation {
         z-index: 0;
     }
 

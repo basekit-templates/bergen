@@ -168,6 +168,7 @@
 
 
     &.folder-open .item-name:after {
+
         // Folder icon animation
         .transform(rotate(0deg));
     }
@@ -278,6 +279,17 @@
 
         @media @tablet-860px {
             background-color:  @color__navigation--text--selected;
+        }
+    }
+}
+
+
+.basket-open {
+    .navigation-toggle,
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        @media @tablet-860px {
+            background-color: white;
         }
     }
 }
