@@ -74,6 +74,24 @@
 @import "@{templateLocal}/stylesheets/pages/homepage-feature.less";         // Homepage Feature
 
 
+.row {
+    background-color: gainsboro;
+    .flex-display;
+    .justify-content(space-between);
+
+
+    &:nth-child(2) {
+        background-color: #eef1ff;
+    }
+
+
+    .column {
+        .align-self(center);
+        .flex(1 0 50%);
+        text-align: center;
+    }
+}
+
 
 
 // -----------------------------
@@ -90,8 +108,9 @@
     .flex-display(flex);
     .flex-wrap(wrap);
     .align-items(center);
+    .justify-content(space-between);
     margin: 0;
-    padding: 35px 35px;
+    padding: 30px 85px 35px 30px;
     position: relative;
     z-index: 999;
 
@@ -196,6 +215,12 @@ body {
 body {
     background-color: @color__body--background;
     height: calc(100% + 1px)!important;
+
+
+    &.basket-open {
+        position: fixed;
+        width: 100%;
+    }
 }
 
 

@@ -4,4 +4,7 @@
         {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png'), "showTplWidget":"0"})|raw}}
         {{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
     </div>
+    {% if plugins.ecommerce.store.live %}
+        {{widget('ecombasket', 'shopbasket', {})|raw}}
+    {% endif %}
 </header>

@@ -5,6 +5,12 @@ $(document).on("click", ".navigation-toggle", function() {
 });
 
 
+// Ecom basket toggle
+$(document).on("click", ".widget__ecombasket", function() {
+    $( "body" ).toggleClass( "basket-open" );
+});
+
+
 // If slide navigation / pagination is visible add class to change feature positioning
 $(document).ready(function(){
     if ( $(".template-feature nav").hasClass("responsiveslideshow__slide-navigation") || $(".template-feature nav").hasClass("responsiveslideshow__slide-pagination") ) {

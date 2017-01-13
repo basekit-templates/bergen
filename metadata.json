@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"bergen.png",
     "templateType":"standard",
-    "pageTypes": ["home", "ecomproductlist"],
+    "pageTypes": ["home", "ecomproductlist", "row-test"],
     "screenshot":"bergen-screenshot.jpg",
      "images":[
          "images/slideshow-1.jpg",
