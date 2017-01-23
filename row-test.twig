@@ -1,0 +1,59 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+
+<div role="main">
+
+    <div class="row">
+        <div class="column">
+            {{widget('content', 'sidebarcontent', {
+                content: '<h1>Get in touch.</h1>'
+            })|raw}}
+        </div>
+        <div class="column">
+            {{widget('contactform', 'contact', {})|raw}}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+            {{widget('gallery', 'imagegallery', {
+              'showTitle': true,
+              'showDescription': true,
+              'images':[
+                {
+                  'url':'http://placehold.it/350x300',
+                  'title':'First image title',
+                  'description': 'First image description'
+                },
+                {
+                  'url':'http://placehold.it/350x400',
+                  'title':'Second image title',
+                  'description': 'Second image description'
+                },
+                {
+                  'url':'http://placehold.it/650x300',
+                  'title':'Third image title',
+                  'description': 'Third image description'
+                }
+              ]
+            })|raw}}
+        </div>
+        <div class="column">
+            {{widget('signupform', 'emailsignup', {})|raw}}
+        </div>
+    </div>
+
+
+    <!-- Main Zone -->
+    {{zone('main')|raw}}
+
+</div>
+
+
+<!-- Footer -->
+{% include "includes/footer.twig" %}
+
+
+{% endblock %}
