@@ -207,6 +207,11 @@ body {
         overflow-y: scroll;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
+        
+        
+        &.edit {
+            overflow: initial;
+        }
     }
 }
 
@@ -215,6 +220,11 @@ body {
 body {
     background-color: @color__body--background;
     height: calc(100% + 1px)!important;
+    
+    
+    &.edit {
+        height: 100!important;
+    }
 
 
     &.basket-open {
