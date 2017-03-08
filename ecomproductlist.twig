@@ -53,7 +53,7 @@
 
 
 {% block scripts %}
-    <script>
+    <script nonce="{{ numberUsedOnce }}">
         $(document).on("click", ".toggle-filter", function() {
             $( "body" ).toggleClass( "filters-open" );
         });
