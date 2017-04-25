@@ -79,18 +79,27 @@
     
     
     .template-feature .responsiveslideshow__figure {
+       
         @media @tablet-860px {
+            height: 800px;
+        }
+        
+        @media @mobile-650px {
             height: 600px;
         }
     }
     
     .site-container  {
-        @media @tablet-860px {
+        
+        @media @mobile-650px {
             max-height: 600px;
+        }
+        
+        @media @tablet-860px {
+            max-height: 800px;
         }
     }
 }
-
 
 
 
