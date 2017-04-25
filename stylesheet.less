@@ -74,23 +74,23 @@
 @import "@{templateLocal}/stylesheets/pages/homepage-feature.less";         // Homepage Feature
 
 
-.row {
-    background-color: gainsboro;
-    .flex-display;
-    .justify-content(space-between);
-
-
-    &:nth-child(2) {
-        background-color: #eef1ff;
+// Fix for full slideshow height in the editor on touch devices
+.touch {
+    
+    
+    .template-feature .responsiveslideshow__figure {
+        @media @tablet-860px {
+            height: 600px;
+        }
     }
-
-
-    .column {
-        .align-self(center);
-        .flex(1 0 50%);
-        text-align: center;
+    
+    .site-container  {
+        @media @tablet-860px {
+            max-height: 600px;
+        }
     }
 }
+
 
 
 
