@@ -5,12 +5,6 @@ $(document).on("click", ".navigation-toggle", function() {
 });
 
 
-// Toggles class open to display/hide navigation folder
- $(document).on("click", ".navigation-item.folder", function() {
-     $(this).toggleClass( "folder-open" );
- });
-
-
 // Ecom basket toggle
 $(document).on("click", ".widget__ecombasket", function() {
     $( "body" ).toggleClass( "basket-open" );
