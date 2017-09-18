@@ -27,23 +27,6 @@ $(document).ready(function(){
 });
 
 
-// Initializer for Twitter widget slideshow effect
-$(document).ready(function(){
-    BaseKit.Util.waitsFor(function () {
-        return $('.twitter__tweet-item').length > 0 ? true : false;
-    }, function () {
-        $('.bk-twitter').unslider({
-            delay: false,             //  Stops slider auto sliding through tweets
-            complete: function() {},  //  A function that gets called after every slide animation
-            keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-            dots: true,               //  Display dot navigation
-            fluid: true              //  Support responsive design. May break non-responsive designs
-        });
-    }, function () {
-    }, 5000);
-});
-
-
 
 // Published Mode Detection
 var publishedmode = true;
@@ -53,8 +36,21 @@ if($("body.edit").length > 0) {
     publishedmode = false;
 }
 
+// Published site delayed load
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.bk-twitter').unslider({
+            delay: false,             //  Stops slider auto sliding through tweets
+            complete: function() {},  //  A function that gets called after every slide animation
+            keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+            dots: true,               //  Display dot navigation
+            fluid: true              //  Support responsive design. May break non-responsive designs
+        });
+    }, 2000);
+});
 
-// If in publish mode re-un twitter script every 10 seconds
+
+// If in edit mode re-run twitter script every 10 seconds to check for widget update
 if(publishedmode==false) {
     window.setInterval(function(){
 
