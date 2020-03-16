@@ -4,6 +4,7 @@
     "thumbnail":"bergen.png",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "screenshot":"bergen-screenshot.jpg",
      "images":[
          "images/slideshow-1.jpg",
