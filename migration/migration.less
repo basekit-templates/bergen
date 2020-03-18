@@ -10,9 +10,109 @@
     // Stylesheet overrides
     // -----------------------------
 
+    &.edit,
+    &.edit .nav-effect,
+    &.edit .template-feature {
+        height: initial;
+    }
 
 
+    &.edit {
+        overflow-x: hidden;
+    }
 
-    // Migration overrides
-    // -----------------------------
+
+    // Move overlay controls away from sidebar
+    .row-overlay {
+        
+        &:before,
+        &:after {
+            background: none!important;
+        }
+    }
+
+
+    &.edit .nav-effect.animate,
+    &.edit .template-feature,
+    &.edit .template-feature [data-widget-type="feature"] {
+        @media only screen and (min-width: 1024px) {
+            height: var(--viewport-height);
+        }
+    }
+
+
+    &.edit .template-feature {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    &.row-editing .template-header {
+        display: none;
+    }
+
+
+    [data-name="contactform"],
+    [data-name="advancedcontactform"],
+    [data-name="signupform"],
+    [data-name="blogsearch"] {
+        background: transparent;
+        border: none;
+    }
+
+
+    .select-wrap:after {
+        top: 6px;
+        z-index: 1;
+    }
+
+
+    [data-widget-type="extendednavigation"] .widget-overlay {
+        bottom: initial;
+        height: 45px;
+        left: initial;
+        right: 28px;
+        top: 25px;
+        width: 45px;
+        z-index: 10006;
+    }
+
+
+    [data-widget-type="extendednavigation"] .widget__item--visibility,
+    [data-widget-type="logo"] .widget__item--visibility,
+    .template-header [data-widget-type="ecombasket"] .widget__item--visibility {
+        bottom: -30px;
+        top: initial;
+    }
+
+
+    [data-name="row"] .contentgroup__image-wrapper .imagewidget__figure {
+        position: initial;
+    }
+
+
+    [data-name="row"] [data-name="twitter"] {
+
+        .twitter {
+            position: initial;
+        }
+
+        .twitter .tweet-item {
+            .flex-direction(column);
+        }
+
+        .twitter .tweet-wrap {
+            margin-left: 0!important;
+        }
+
+
+        .twitter .avatar {
+            margin: 8px auto!important;
+        }
+
+        .dots {
+            background: transparent!important;
+            border: none!important;
+        }
+    }
 }
