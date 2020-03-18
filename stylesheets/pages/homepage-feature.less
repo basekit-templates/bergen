@@ -34,7 +34,7 @@
 
     height: 100%;
     text-align: center;
-    z-index: 999;
+    z-index: 1;
 
     // Give feature text more room the smaller the screen gets
     @media only screen and (max-width: 1500px) {
@@ -268,7 +268,7 @@
         .flex-display;
         .align-items(center);
         .justify-content(center);
-        height: 101vh;
+        height: 100vh;
         position: initial;
 
         @media @tablet-860px {
@@ -468,6 +468,13 @@
             border: 2px solid white;
         }
     }
+}
+
+
+// Make header items clickable above slideshow when feature is hidden
+.template-feature [data-widget-type="feature"].bk-tpl-hidden + [data-widget-type="responsiveslideshow"] {
+    position: relative;
+    z-index: 1;
 }
 
 

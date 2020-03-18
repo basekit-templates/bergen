@@ -121,7 +121,7 @@
     margin: 0;
     padding: 30px 85px 35px 30px;
     position: relative;
-    z-index: 999;
+    z-index: 2;
 
     @media @tablet-860px {
         background-color: @color-swatch1;
@@ -228,12 +228,7 @@ body {
 // Body background colour
 body {
     background-color: @color__body--background;
-    height: calc(100% + 1px)!important;
-    
-    
-    &.edit {
-        height: 100!important;
-    }
+    height: calc(100% + 1px);
 
 
     &.basket-open {
@@ -268,7 +263,7 @@ body {
 
 
 // Main zone wrapper
-[role="main"],
+[role="main"] #page-zones__main,
 .blog-page .bk-zone,
 .blog-list-page .bk-zone,
 .ecom-page .bk-zone,
@@ -280,8 +275,25 @@ body {
     overflow: hidden;
 
 
+
+    #migrated-site.edit:not(.is-move-mode) & {
+        overflow: visible;
+    }
+
+
+    .row-editing & {
+        background-color: transparent;
+        box-shadow: z;
+    }
+
+
+    .is-move-mode & {
+        margin: 0;
+    }
+
+
     // Default widget spacing
-    .widget {
+    > .widget {
         margin: 0 auto 80px;
         max-width: 1000px;
         padding: 0 30px;
@@ -305,7 +317,26 @@ body {
         }
 
 
+        // Sections
+        &[data-name="row"] {
+            margin: 0;
+
+            + .widget {
+                margin-top: 50px;
+            }
+
+            + .widget[data-name="responsiveslideshow"],
+            + .widget[data-name="youtube"],
+            + .widget[data-name="map"],
+            + .widget[data-name="gallery"],
+            + .widget[data-name="image"] {
+                margin-top: 0;
+            }
+        }
+
+
         // Full width widgets
+        &.widget[data-name="row"],
         &.widget[data-name="responsiveslideshow"],
         &.widget[data-widget-type="responsiveslideshow"],
         &.widget[data-name="youtube"],
@@ -365,7 +396,7 @@ body {
 
 
 // Removes large spacing between some widgets when placed in a certain order
-[data-name="content"] {
+#page-zones__main > [data-name="content"] {
     &+ [data-name="button"],
     &+ [data-name="clicktocall"],
     &+ [data-name="content"],
@@ -393,7 +424,7 @@ body {
 // --------------------
 
 
-[role="main"] [data-name="responsivecolumns"] {
+[role="main"] #page-zones__main > [data-name="responsivecolumns"] {
     max-width: 100%;
     padding: 0;
 
@@ -406,6 +437,7 @@ body {
 
 
     .contactform,
+    .advancedcontactform,
     .signupform,
     .blogsearch {
 
@@ -466,7 +498,7 @@ body {
     }
 }
 
-[data-name="responsivecolumns"] .widget {
+[role="main"] #page-zones__main > [data-name="responsivecolumns"] .widget {
     padding: 0 30px!important;
 
     @media @tablet-860px {
