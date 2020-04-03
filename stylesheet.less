@@ -149,13 +149,13 @@
         }
 
 
-        // Add spacing betweent logo and company name
-        .widget:first-child {
+        // Add spacing between logo and company name
+        .widget:not([data-widget-type="companyname"]):first-child {
             margin-right: 12px;
         }
 
 
-        // Stop logo becomign to large
+        // Stop logo becoming to large
         .logo-image {
             max-height: 180px;
 
@@ -278,7 +278,6 @@ body {
     -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
     box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
     overflow: hidden;
-
 
 
     #migrated-site.edit:not(.is-move-mode) & {
@@ -423,93 +422,6 @@ body {
     margin-bottom: 0!important;
 }
 
-
-
-// Responsive columns
-// --------------------
-
-
-[role="main"] #page-zones__main > [data-name="responsivecolumns"] {
-    max-width: 100%;
-    padding: 0;
-
-
-    .widget {
-        @media @mobile-650px {
-            margin-bottom: 50px!important;
-        }
-    }
-
-
-    .contactform,
-    .advancedcontactform,
-    .signupform,
-    .blogsearch {
-
-
-        &__form {
-            @media @tablet-860px {
-                padding: 35px 25px;
-            }
-        }
-    }
-
-
-    .responsivecolumns .columns-two-left,
-    .responsivecolumns .columns-two-right {
-        margin-right: 0!important;
-        width: 50%;
-
-        @media @mobile-650px {
-            width: 100%;
-        }
-    }
-
-
-    .responsivecolumns .columns-three-left,
-    .responsivecolumns .columns-three-middle,
-    .responsivecolumns .columns-three-right {
-        margin-right: 0!important;
-        width: 33.33%;
-
-        @media @tablet-860px {
-            width: 50%;
-        }
-
-        @media @mobile-650px {
-            width: 100%;
-        }
-    }
-
-
-    .responsivecolumns .columns-four-first,
-    .responsivecolumns .columns-four-second,
-    .responsivecolumns .columns-four-third,
-    .responsivecolumns .columns-four-fourth {
-        margin-right: 0!important;
-        width: 25%;
-
-        @media @desktop-1024px {
-            width: 33.33%;
-        }
-
-        @media @tablet-860px {
-            width: 50%;
-        }
-
-        @media @mobile-650px {
-            width: 100%;
-        }
-    }
-}
-
-[role="main"] #page-zones__main > [data-name="responsivecolumns"] .widget {
-    padding: 0 30px!important;
-
-    @media @tablet-860px {
-        padding: 0 15px;
-    }
-}
 
 
 
