@@ -34,7 +34,9 @@
 
     &.edit .nav-effect.animate,
     &.edit .template-feature,
-    &.edit .template-feature [data-widget-type="feature"] {
+    &.edit .template-feature [data-widget-type="feature"],
+    &.edit .template-feature [data-widget-type="feature"].bk-tpl-hidden + [data-widget-type="responsiveslideshow"] .responsiveslideshow__figure,
+    &.edit .template-feature .responsiveslideshow__figure {
         @media only screen and (min-width: 1024px) {
             height: var(--viewport-height);
         }
@@ -47,7 +49,10 @@
     }
 
 
-    &.row-editing .template-header {
+    &.row-editing .template-header,
+    &.is-move-mode .template-header,
+    &.row-editing [data-widget-type="extendednavigation"],
+    &.is-move-mode [data-widget-type="extendednavigation"] {
         display: none;
     }
 
@@ -113,6 +118,30 @@
         .dots {
             background: transparent!important;
             border: none!important;
+        }
+    }
+
+
+    [data-name="row"] {
+
+        .gallery__figure {
+            top: 0;
+        }
+
+        .gallery__image-link {
+            @media only screen and (min-width: 650px) {
+                padding-bottom: 50%;
+            }
+        }
+    }
+
+
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        padding-bottom: 50px;
+
+        @media @mobile {
+            padding-bottom: 30px;
         }
     }
 }
